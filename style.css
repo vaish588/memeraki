@@ -1,0 +1,300 @@
+/* --- General Reset & Body --- */
+body {
+    margin: 0px;
+}
+
+/* --- Navigation & Header --- */
+section.og {
+    background-color: rgb(68, 3, 68);
+    text-align: center;
+    font-size: large;
+    line-height: 2.5;
+}
+
+section.og a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    background-color: white;
+    line-height: 2.5;
+    font-size: 30px;
+    /* border-bottom: 2px solid rgb(4, 36, 36); Changed to border-bottom for visibility */
+    width: 100%;
+}
+
+/* --- Fixed Dropdown Menu --- */
+.r {
+    background-color: rgb(126, 47, 126);
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.r ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.r li {
+    display: inline-block;
+    position: relative;
+    /* Context for the absolute dropdown */
+}
+
+.r ul li a {
+    color: rgb(253, 253, 253);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.r ul li a:hover {
+    background-color: rgb(216, 171, 216);
+    color: black;
+}
+
+/* SUBMENU - The fix is here */
+.r ul li ul {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* top: 100%;            Aligns exactly below parent */
+    /* left: 0; */
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    /* box-shadow: 0px 4px 8px rgba(0,0,0,0.1); */
+    /* z-index: 1000;        Ensures it stays above images/videos */
+}
+
+.r ul li ul li {
+    display: block;
+    /* Submenu items stack vertically */
+}
+
+.r ul li ul li a {
+    color: grey;
+    /* padding: 10px; */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* TRIGGER - Shows the menu on hover */
+.r ul li:hover>ul {
+    display: block;
+}
+
+/* --- Section A (Banner) --- */
+section.a>picture>img {
+    vertical-align: middle;
+    border-radius: 10px;
+    height: auto;
+    max-width: 100%;
+    /* Better responsiveness than fixed width */
+    width: 1300px;
+    margin: 30px auto;
+    display: block;
+}
+
+/* --- Section B (Image Boxes) --- */
+section.b,
+section.d {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+div.red,
+div.pink,
+div.green {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: rgb(139, 7, 100);
+    font-weight: bold;
+    padding: 150px;
+    font-size: 30px;
+    margin: 20px;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.red {
+    background-image: url(https://cdn.shopify.com/s/files/1/1194/1498/files/Cropped_Image_1.jpg?width=315&quality=80);
+}
+
+div.pink {
+    background-image: url(https://cdn.shopify.com/s/files/1/1194/1498/files/phad1.png?v=1771499101?width=315&quality=80);
+}
+
+div.green {
+    background-image: url(https://cdn.shopify.com/s/files/1/1194/1498/files/1-1new.png?v=1771411863?width=315&quality=80);
+    font-size: 25px;
+}
+
+/* --- Videos & Layouts --- */
+section.c {
+    text-align: center;
+    font-size: 30px;
+}
+
+.light>video,
+.ligh>video,
+.lig>video {
+    border-radius: 15px;
+}
+
+section.f,
+ul li span {
+    font-size: 35px;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+    padding: 30px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+.popular,
+.colour,
+.color {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.colour {
+    padding: 80px;
+}
+
+/* --- Section G & J (Grid Layouts) --- */
+section.g,
+section.j {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    padding: 50px 0px 0px 5px;
+    text-align: center;
+}
+
+.g div>p,
+.j div>p {
+    font-weight: lighter;
+    color: grey;
+}
+
+/* --- Section H (CTA Banner) --- */
+section.h {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 70px 50px;
+    background-image: url(https://i.pinimg.com/736x/0e/ca/40/0eca402961c6024f5a9889db83f481b6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 50px;
+}
+
+.under {
+    background-color: hsl(61, 100%, 50%);
+    border: 1px solid rgb(255, 255, 0);
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* --- Section K (Circles) --- */
+.k {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 90px;
+    margin-top: 10px;
+    padding: 50px;
+}
+
+.k img {
+    height: 120px;
+    width: 120px;
+    /* Added px */
+    border-radius: 100px;
+}
+
+/* --- Info Sections --- */
+section.i,
+.ci,
+.n,
+.o,
+.p {
+    text-align: center;
+    margin: 40px;
+}
+
+.i b,
+.ci b,
+.n b,
+.p b {
+    font-size: 30px;
+}
+
+.ci p,
+.n p {
+    font-weight: lighter;
+}
+
+.n p,
+.o {
+    color: rgb(59, 1, 59);
+}
+
+/* --- Section L & M --- */
+section.l div,
+.z {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+.l img {
+    border-radius: 10px;
+}
+
+.z img {
+    height: 100px;
+    width: 100px;
+}
+
+section.m ul li {
+    display: flex;
+    gap: 55px;
+    list-style: none;
+    padding: 0px;
+}
+
+/* --- Footer Area --- */
+.y {
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+    background-color: rgb(204, 149, 255);
+}
+
+footer {
+    background-color: rgb(68, 3, 68);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}

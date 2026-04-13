@@ -1,0 +1,544 @@
+<html>
+
+<head>
+    <title>MeMeraki</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        /* --- Navigation & Header --- */
+        section.og {
+            background-color: rgb(68, 3, 68);
+            text-align: center;
+            font-size: large;
+            line-height: 2.5;
+        }
+
+        section.og a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header {
+            text-align: center;
+            background-color: white;
+            line-height: 2.5;
+            font-size: 30px;
+            /* border-bottom: 2px solid rgb(4, 36, 36); Changed to border-bottom for visibility */
+            width: 100%;
+        }
+
+        /* --- Fixed Dropdown Menu --- */
+        .r {
+            background-color: rgb(126, 47, 126);
+            line-height: 2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .r ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .r li {
+            display: inline-block;
+            position: relative;
+            /* Context for the absolute dropdown */
+        }
+
+        .r ul li a {
+            color: rgb(253, 253, 253);
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .r ul li a:hover {
+            background-color: rgb(216, 171, 216);
+            color: black;
+        }
+
+        /* SUBMENU - The fix is here */
+        .r ul li ul {
+            display: none;
+            /* Hidden by default */
+            position: absolute;
+            /* top: 100%;            Aligns exactly below parent */
+            /* left: 0; */
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            min-width: 150px;
+            /* box-shadow: 0px 4px 8px rgba(0,0,0,0.1); */
+            /* z-index: 1000;        Ensures it stays above images/videos */
+        }
+
+        .r ul li ul li {
+            display: block;
+            /* Submenu items stack vertically */
+        }
+
+        .r ul li ul li a {
+            color: grey;
+            /* padding: 10px; */
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* TRIGGER - Shows the menu on hover */
+        .r ul li:hover>ul {
+            display: block;
+        }
+
+        .a {
+            display: flex;
+        }
+
+        .a img {
+            width: 400px;
+            height: 500px;
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        .a p {
+            color: rgb(58, 55, 55);
+            margin-left: 30px;
+            font-weight: lighter;
+            font-size: medium;
+        }
+
+        .a h5 {
+            color: rgb(99, 94, 94);
+            margin-left: 30px;
+            font-weight: lighter;
+        }
+
+        .a b {
+            background-color: rgb(68, 3, 68);
+            color: aliceblue;
+            padding: 10px;
+            margin-left: 15px;
+            padding-right: 190px;
+            padding-left: 180px;
+            cursor: pointer;
+        }
+
+        .b {
+            display: flex;
+        }
+
+        .b img {
+            width: 400px;
+            height: 500px;
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        .b p {
+            color: rgb(58, 55, 55);
+            margin-left: 30px;
+            font-weight: lighter;
+            font-size: medium;
+        }
+
+        .b h5 {
+            color: rgb(99, 94, 94);
+            margin-left: 30px;
+            font-weight: lighter;
+        }
+
+        .b b {
+            background-color: rgb(68, 3, 68);
+            color: aliceblue;
+            padding: 10px;
+            margin-left: 15px;
+            padding-right: 190px;
+            padding-left: 180px;
+            cursor: pointer;
+        }
+
+        section.c {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+        .d {
+            font-weight: lighter;
+            color: rgb(82, 80, 80);
+            padding: 15px;
+        }
+
+        .e {
+            padding: 15px;
+        }
+
+        .e h4 {
+            font-size: 20px;
+
+        }
+
+        .e p {
+            color: rgb(71, 71, 71);
+
+        }
+
+        .s {
+            padding: 10px;
+        }
+
+        .s li {
+            padding: 5px;
+            color: rgb(71, 71, 71);
+        }
+
+        .s b {
+            color: #000;
+        }
+
+        .t {
+            padding: 10px;
+        }
+
+        .t b {
+            font-size: 20px;
+        }
+
+        .t p {
+            color: rgb(71, 71, 71);
+        }
+
+        .t a {
+            color: rgb(71, 71, 71);
+
+        }
+
+        .u {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .u img {
+            width: 65px;
+            height: 65px;
+
+        }
+
+        .u p {
+            font-weight: 500px;
+            font-size: 9px;
+            text-align: center;
+            color: rgb(71, 71, 71);
+            ;
+
+        }
+
+        footer {
+            background-color: rgb(68, 3, 68);
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="og">
+        <a href="firstlink.html">Still unsure?See how real customers style our artworks at home</a>
+    </section>
+    <header><img src="https://www.memeraki.com/cdn/shop/files/ConvertOut-Resized-sharktanklogo_400x.jpg?v=1770977347" alt="pic">
+     <a href="index.html" style="text-decoration: none; 
+              color: #fff; 
+              background-color: rgb(68, 3, 68); 
+              padding: 8px 20px; 
+              border-radius: 4px; 
+              font-family: sans-serif; 
+              font-weight: bold; 
+              font-size: 14px;
+              position: absolute;
+              top: 90px;
+              left: 1200px;">
+
+
+            HOME
+        </a>
+   
+    </header>
+    <section class="r">
+        <ul>
+            <li>
+                <a href="#">Discover Indian Heritage 🔻 </a>
+                <ul>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Guides</a>
+                    </li>
+                    <li>
+                        <a href="#">Learn Indian Arts</a>
+                    </li>
+                    <li>
+                        <a href="#">Art installations</a>
+                    </li>
+                    <li>
+                        <a href="#">News and Events</a>
+                    </li>
+                    <li>
+                        <a href="#">Try Artworks in Your Room</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Editor's Picks</a></li>
+            <li>
+                <a href="#">Shop - Artworks & More 🔻 </a>
+                <ul>
+                    <li><a href="#">All Handmade Artworks</a></li>
+                    <li><a href="#">Decor Plates</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Ready to Ship Artworks - 10% OFF</a></li>
+            <li><a href="#">Top Artforms 🔻</a>
+                <ul>
+                    <li><a href="#">Madhubani</a></li>
+                    <li><a href="#">Kalamkari</a></li>
+                    <li><a href="#">Pichwai</a></li>
+                    <li><a href="#">Gond</a></li>
+                    <li><a href="#">Kalighat</a></li>
+                    <li><a href="#">Warli</a></li>
+                    <li><a href="#">Lippan</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Top Artists 🔻</a>
+                <ul>
+                    <li><a href="#">Shezaad Ali Sherani (Pichwai)</a></li>
+                    <li><a href="#">Harinath N (Kalamkari)</a></li>
+                    <li><a href="#">Uttam Chitrakar (Kalighat)</a></li>
+                    <li><a href="#">Gareeba Tekam (Gond)</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Best Selling Artworks</a></li>
+
+        </ul>
+    </section>
+    
+    <section class="a">
+        <div class="mythology">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/1._Peacocks_amidst_the_Palace_Garden_in_Pichwai_by_Shehzaad_Ali_Sherani.png?v=1761570287"
+                alt="pic">
+            <p>Peacocks amidst the Palace Garden in Pichwai </p>
+            <h5>Artist - Shehzaad Ali Sheran</h5>
+            <b>$14,000</b>
+
+        </div>
+        <div class="mytholog">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/1._Tree_of_Life_Kalamkari_Painting_by_Siva_Reddy.png?v=1761207277"
+                alt="pic">
+            <p>Tree of Life Kalamkari Painting by Siva Reddy</p>
+            <h5>Artist - Siva Reddy</h5>
+            <b>$12,000</b>
+        </div>
+        <div class="mytholo">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/P2_f83171ef-7b14-418d-b37b-5e87df9ba3a8.png?v=1758104060"
+                alt="pic">
+            <p>Mushroom Harvest in Gond by Gareeba Singh Tekam </p>
+            <h5>Artist -  Gareeba Singh Tekam </h5>
+            <b>$11,000</b>
+        </div>
+    </section>
+    <section class="b">
+        <div class="mythol">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/1._The_Holy_Embrace_Parvati_Ganesha_in_Kalighat_by_Sonali_Chitrakar.jpg?v=1741853937"
+                alt="pic">
+            <p>The Holy Embrace: Parvati Ganesha in Kalighat by Sonali Chitrakar</p>
+            <h5>Artist - Sonali Chitrakar</h5>
+            <b>$11,000</b>
+        </div>
+        <div class="mytho">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/1._Life_in_Village_Lush_Flora_and_Fauna_in_Machlipatnam_Kalamkari_by_Varun_Kumar_Pitchuka.png?v=1759334424"
+                alt="pic">
+            <p>Life in Village: Lush Flora and Fauna in Machlipatnam Kalamkari </p>
+            <h5>Artist -  Varun Kumar Pitchuka </h5>
+            <b>$20,000</b>
+        </div>
+        <div class="myth">
+             <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/1._Tree_of_life_with_animals_in_Narayanpet_and_Srikalahasti_Kalamkari_by_Ghanshyam_Sarode.png?v=1773048170"
+                alt="pic">
+            <p>Tree of life with animals in Narayanpet and Srikalahasti Kalamkari  </p>
+            <h5>Artist -  Ghanshyam Sarode</h5>
+            <b>$14,000</b>
+        </div>
+    </section>
+    <section class="c">
+        About <br>
+        ______
+    </section>
+    <section class="d">
+        <p>Handpainted Paintings by Masters’ is a curated collection of Indian paintings that brings together the rich
+            artistic heritage of India through traditional, historical, and contemporary art forms. This exclusive
+            assortment features famous paintings in India, executed by renowned master artists from some of the most
+            remote artistic hubs of the country.</p>
+        <p>Every piece in this collection reflects the soul of Indian traditions, mythology, and folklore, ensuring that
+            these exquisite Indian artworks continue to thrive in modern times. From the intricate detailing of Indian
+            miniature paintings to the bold strokes of folk painting in India, each work is infused with centuries-old
+            wisdom passed down through generations.</p>
+        <p>Whether you seek exotic Indian art or wish to buy paintings online in India, this collection offers a glimpse
+            into the timeless beauty of India’s art and culture.</p>
+    </section>
+    <section class="e">
+        <h4>A Journey Through Traditional Indian Paintings</h4>
+        <b>Indian Folk Art and Traditional Indian Paintings</b>
+        <p>The traditional folk art of India is deeply intertwined with the country’s history, spirituality, and way of
+            life. Folk paintings in India have long been a means of storytelling, carrying narratives of gods,
+            goddesses, daily life, and epics. Some of the most celebrated traditional paintings in India include:</p>
+    </section>
+    <section class="s">
+        <ul>
+            <li><b>Madhubani Painting (Bihar)</b> - A vibrant folk art form known for its intricate patterns, natural
+                dyes, and mythological themes. Explore Madhubani Art.</li>
+            <li><b>Pattachitra Painting (Odisha & West Bengal)</b>– A scroll painting tradition that narrates Hindu
+                epics like the Ramayana and Mahabharata.</li>
+            <li><b>Gond Art (Madhya Pradesh) </b> – An indigenous tribal painting that features intricate dots and
+                lines, often depicting nature, folklore, and animals. Read More About Gond Art.</li>
+            <li><b>Warli Painting (Maharashtra)</b>– A minimalist tribal art form, created using geometric shapes to
+                depict daily life, rituals, and nature.</li>
+            <br> Famous Indian Art Paintings and Miniature Masterpieces
+        </ul>
+    </section>
+    <section class="t"> <b>India’s Miniature Painting Heritage</b>
+        <p>The tradition of India miniature painting dates back centuries and is one of the most recognized historical
+            paintings in India. These highly detailed artworks were patronized by royal courts and aristocrats,
+            featuring epic tales, courtly life, and divine themes.</p>
+    </section>
+    <section class="s">
+        <ul>
+            <li><b>Rajasthani Miniature Paintings</b> - Including the famous Bani Thani painting, these works showcase
+                graceful figures, intricate floral designs, and delicate brushwork.</li>
+            <li><b>Radha Bani Thani Painting </b>– Inspired by the Kishangarh school, this original Bani Thani painting
+                captures the ethereal beauty of Radha, with arched brows, elongated eyes, and a serene expression.</li>
+            <li><b>Mughal Miniature Paintings </b>– Known for their realistic details and Persian influences, depicting
+                historical battles, royal life, and courtly romance.</li>
+            <li><b>Pahari Miniature Paintings</b> – Originating from Himachal Pradesh, showcasing Hindu mythological
+                themes, gods, and goddesses in lush landscapes.</li>
+
+        </ul>
+    </section>
+    <section class="t">
+        <p>These Indian miniature paintings have played a significant role in preserving India’s artistic traditions,
+            and their influence continues to inspire modern Indian art.</p>
+    </section>
+    <section class="t">
+        <b>Modern Indian Art and Contemporary Trends</b>
+        <h5>The Evolution of Indian Contemporary Art</h5>
+        <p>While traditional painting in India remains a cherished legacy, modern artists have redefined the landscape
+            with bold expressions and innovative techniques.</p>
+    </section>
+    <section class="s">
+        <ul>
+            <li><b>Modern Indian Art </b>– Combines abstract forms, surreal themes, and social narratives, blending
+                tradition with contemporary interpretations.</li>
+            <li><b>ndian Contemporary Art </b>– Artists experiment with new media, digital techniques, and mixed
+                materials, making Indian wall art decor more accessible to global audiences.</li>
+            <li><b>Indian Sculpture</b>– From ancient temple carvings to modern abstract installations, sculptural art
+                in India continues to evolve while retaining its spiritual essence.</li>
+            <li>Several famous artists in India, like Raja Ravi Varma, Amrita Sher-Gil, and S.H. Raza, have shaped the
+                evolution of modern Indian paintings while staying rooted in India’s rich artistic traditions.</li>
+        </ul>
+    </section>
+    <section class="t">
+        <b>Master Artisans and Their Timeless Craftsmanship</b>
+        <h5>Custodians of Indian Artistic Heritage</h5>
+        <p>This collection has been carefully assembled through direct collaboration with master artisans across India.
+            These artists imbibe generations of knowledge while evolving their techniques to suit modern tastes. Many
+            have been recognized with prestigious awards like Padma Shri and Shilp Guru, honoring their exceptional
+            contribution to Indian art.</p>
+        <p>Our master artists are the custodians of history and storytelling, ensuring that traditional artwork of India
+            remains relevant and admired by art lovers worldwide.</p>
+        <h5>Buy Authentic Indian Paintings Online</h5>
+        <p>
+            For art enthusiasts who wish to own a piece of India’s artistic legacy, we offer a chance to buy paintings
+            online in India. Whether you are looking for:
+        </p>
+    </section>
+    <section class="s">
+        <ul>
+            <li><b>Devotional & Mythological Art </b>– Tanjore, Pichwai, Pattachitra</li>
+            <li><b>Tribal & Folk Art </b>– Gond, Warli, Madhubani, Kalighat</li>
+            <li><b>Miniature & Courtly Art </b>– Mughal, Rajasthani, Pahari</li>
+            <li><b>Modern & Contemporary Art</b>– Abstract, Expressionist, Digital
+            </li>
+        </ul>
+    </section>
+    <section class="t">
+        <p>Each painting is authentically handcrafted, ensuring you bring home a true representation of India’s art and
+            culture.</p>
+        <p> Explore our exquisite collection of Indian paintings and support the legacy of master artisans at MeMeraki.
+        </p>
+    </section>
+    <section class="t">
+        <b>Conclusion: A Tribute to India’s Artistic Legacy</b>
+        <p>This collection is more than just a showcase of famous art in India—it is a celebration of India’s cultural
+            soul. Whether you are a collector, enthusiast, or someone looking for Indian wall art decor, these paintings
+            carry the essence of storytelling, devotion, and heritage.</p>
+        <h5>📌 Discover More:</h5>
+        <a href="#">Madhubani~History, Themes And Characteristics | Madhubani painting – MeMeraki</a>
+        <br><br><a href="#"> Kalamkari- Timeless artform of ancient India – MeMeraki</a>
+        <br><br><a href="#">The 5 Themes of Pichhwai Art – MeMeraki</a>
+        <br><br><a href="#">Gond Art: History, Elements and Stories – MeMeraki</a>
+        <br><br><a href="#">Kalighat Paintings – MeMeraki</a>
+    </section>
+    <hr>
+    <section class="u">
+        <div class="secure">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/Handmade_Artwork.png?v=1714028722" alt="pic">
+            <p>AUTHENTIC <br>
+                HANDMADE <br>
+                ARTWORKS</p>
+        </div>
+        <div class="secur">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/international_shipping_4fea5ec6-dbd8-48ff-961a-3dc1e9597aa2.png?v=1714028722"
+                alt="pic">
+
+            <p>INTERNATIONAL <br>
+                SHIPPING</p>
+        </div>
+        <div class="secu">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/certificate_of_authencitypng.png?v=1750413072"
+                alt="pic">
+            <p>CERTIFICATE OF <br>
+                AUTHENTICITY</p>
+        </div>
+        <div class="sec">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/security_checkout_620b1e15-bb41-4791-9001-1380fa33473f.png?v=1714030232"
+                alt="pic">
+            <p>SECURE <br>
+                CHECKOUT <br>
+                via RAZORPAY</p>
+        </div>
+        <div class="se">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/secure_packaging.png?v=1765783921" alt="pic">
+
+            <p>SECURE <br>
+                PACKAGING</p>
+        </div>
+        <div class="securely">
+            <img src="https://cdn.shopify.com/s/files/1/1194/1498/files/celebrate_Artistsans.png?v=1714028722"
+                alt="pic">
+            <p>ARTISANS <br>
+                FIRST <br>
+                PRICING</p>
+        </div>
+    </section>
+</body>
+<footer>&copy 2026 MeMeraki Retail and Tech Pvt Ltd.</footer>
+
+
+</html>
